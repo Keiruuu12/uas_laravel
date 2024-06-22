@@ -15,7 +15,7 @@
         </thead>
         @foreach ($pasiens as $pasien)
         <tbody>
-            <td>{{ $loop->iteration }}</td>
+            <td>{{ $pasiens->firstItem() + $loop->iteration -1 }}</td>
             <td><a href="{{ route('pasiens.show', ['pasien' => $pasien->id]) }}" style="text-decoration: none">{{ $pasien->name }}</a></td>
             <td>{{ $pasien->phone }}</td>
             <td>{{ $pasien->address }}</td>
